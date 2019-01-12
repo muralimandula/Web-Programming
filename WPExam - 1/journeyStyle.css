@@ -1,0 +1,47 @@
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+      border: solid black 2px;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+     .texthead {
+         text-align: center;
+         margin: auto;
+     }
+
+     .profilepic {
+         border-radius: 50%;
+         height: 50%;
+         width: 70%;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         border:solid black 2px;
+     }
+
+     .profileInfo {
+         /* margin-top: 20px; */
+         border: solid black 1px;
+         text-align: center;
+     }
+
+     .courseimage {
+         height: 100px;;
+         width: 100%;
+         border: solid black 2px;
+         margin: -15px;
+     }
+
+     #shadow {
+        border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+     }

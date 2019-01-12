@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+      border: solid black 2px;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+     .texthead {
+         text-align: center;
+         margin: auto;
+     }
+
+     .profilepic {
+         border-radius: 50%;
+         height: 50%;
+         width: 70%;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         border:solid black 2px;
+     }
+
+     .profileInfo {
+         /* margin-top: 20px; */
+         border: solid black 1px;
+         text-align: center;
+     }
+
+     .courseimage {
+         height: 100px;;
+         width: 100%;
+         border: solid black 2px;
+         margin: -15px;
+     }
+
+     #shadow {
+        border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+     }
+
+     .bottom-right {
+  position: absolute;
+  top: 30%;
+  right: 20%;
+}
+
+  div.scroll {
+    overflow: visible;
+  }
+
+  div.ex1 {
+  background-color: white;
+  margin-top: 20px;
+  width: 100%;
+  height: 110px;
+  overflow: scroll;
+}
+  </style>
+</head>
+<body>
+
+
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+        <div style="height: 50%">
+            
+            <img class="profilepic" src="boy.jpg" alt="Avatar">
+            <h1 class="texthead">MyName</h1>
+        </div>
+        <div class="profileInfo" style="height: 50%">
+                <h3>THINGS TO KNOW ABOUT ME!</h3>
+                <h4>
+                <ul>
+                    <li>Point 1 about me<br/></li>
+                    <li>Point 2 about me<br></li>
+                    <li>Point 3 about me<br></li>
+                    <li>Point 4 about me<br></li>
+                </ul>
+            </h4>
+            </div>
+    </div>
+
+
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="well">
+        <h1 class="texthead">My Journey So Far...</h1>
+        <hr style="color: black; size: 10px">
+      </div>
+
+      <div class="row">
+
+        <div id="shadow" class="col-sm-4" style="shadow:2px 2px black">
+          <div class="well">
+              <div>
+                  <img class="courseimage" src="cspp.jpg">
+                  <div class="bottom-right">
+                    <h4>CSPP</h4>
+                  </div>
+              </div>
+            <div class="ex1">
+            <ul>
+                    <li><h6>What you enjoyed</h6></li>
+                    <li><h6>What could improve</h6></li>
+                    <li><h6>Any rants / compliments</h6></li>
+
+                </ul>
+              </div>
+          </div>
+        </div>
+        
+        <div id="shadow" class="col-sm-4">
+          <div class="well">
+                <img class="courseimage" src="dsa.png">
+            <h4 class="bottom-right">ADS</h4>
+            <div class="ex1">
+            <ul>
+                    <li><h6>What you enjoyed</h6></li>
+                    <li><h6>What could improve</h6></li>
+                    <li><h6>Any rants / compliments</h6></li>
+
+                </ul>
+              </div>
+          </div>
+        </div>
+        
+        <div id="shadow" class="col-sm-4">
+          <div class="well">
+                <img class="courseimage" src="dbms.png">
+            <h4 class="bottom-right">DBMS</h4>
+            <div class="ex1">
+            <ul>
+                    <li><h6>What you enjoyed</h6></li>
+                    <li><h6>What could improve</h6></li>
+                    <li><h6>Any rants / compliments</h6></li>
+
+                </ul>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="row">
+        <div id="shadow" class="col-sm-4">
+          <div class="well">
+                <img class="courseimage" src="ICS.jpg">
+              <h4 class="bottom-right">ICS</h4>
+              <div class="ex1">
+                <ul>
+                    <li><h6>What you enjoyed</h6></li>
+                    <li><h6>What could improve</h6></li>
+                    <li><h6>Any rants / compliments</h6></li>
+
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div id="shadow" class="col-sm-4">
+          <div class="well">
+                <img class="courseimage" src="cnf.jpg">
+              <h4 class="bottom-right">CNF</h4>
+              <div class="ex1">
+              <ul>
+                    <li><h6>What you enjoyed</h6></li>
+                    <li><h6>What could improve</h6></li>
+                    <li><h6>Any rants / compliments</h6></li>
+
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div id="shadow" class="col-sm-4">
+          <div class="well">
+                <img class="courseimage" src="Cybersecurity.png">
+              <h4 class="bottom-right">CS</h4>
+              <div class="ex1">
+              <ul>
+                    <li><h6>What you enjoyed</h6></li>
+                    <li><h6>What could improve</h6></li>
+                    <li><h6>Any rants / compliments</h6></li>
+
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
