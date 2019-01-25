@@ -1,45 +1,46 @@
-var info = "1234-abc-msit-cihl";
+var passwordsasstring = "1234-abc-msit-cihl";
 
-// var passwords = JSON.parse(info);
+var comments = [["Name","Comment"]];
 
-var comments = [["1","two"], ["2","three"]];
 
 function load() {
-    var i = 0;
-    while (i < comments.length-1 ) {
-        loadcomments(i);
-        i++;
-}
 
+    var i = comments.length - 1;
+    while (i > 0) {
+        loadcomments(i);
+        i--;
+    }
 }
 
 function loadcomments(i) {
 
     document.getElementById("loadcomments").innerHTML += 
-    '<div>' +
-        comments[i][0] + ': ' + comments[i][1]+
-    '</div> </br>'
-
-
+        '<div class="commentdisplay">  <h4> ' + comments[i][1] + '</h4> '+ '</div><div><h6> ' + comments[i][0]  + '</h6></div>';
 }
 
-function validate(name, commenttext) {
+function validate(inputpassword, username, commenttext) {
 
-    if(info.includes("abc")) {
-        comments.push([name, commenttext]);
-        load();
-
-        // document.getElementById("loadcomments").innerHTML = commenttext;
-
-    }
-
-    if(name== "") {
-        document.getElementById("namestatus").innerHTML= "cannot be blank";
-    }
-
-    if(commenttext == "") {
-        document.getElementById("commentstatus").innerHTML= "cannot be blank";
-
-    }
+    if(username == "") {
+        document.getElementById("namestatus").style.visibility= 'visible';
     
+    }else if(commenttext == "") {
+        document.getElementById("namestatus").style.visibility= 'hidden';
+        document.getElementById("commentstatus").style.visibility= 'visible';
+    
+    }else if(inputpassword == "") {
+        document.getElementById("commentstatus").style.visibility= 'hidden';
+        document.getElementById("passwordblank").style.visibility= 'visible';
+
+    }else if(passwordsasstring.includes(inputpassword)) {
+        document.getElementById("loadcomments").innerHTML = "";
+        comments.push([username, commenttext]);
+
+        load();
+        document.getElementById('username').value = "";
+        document.getElementById('commenttext').value = "";
+        document.getElementById('inputpassword').value = "";
+    }else{
+        document.getElementById("passwordstatus").style.visibility="visible";
+
+    }    
 }

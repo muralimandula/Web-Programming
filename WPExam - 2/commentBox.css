@@ -1,14 +1,40 @@
+.commentdisplay {
+    background-color: rgb(223, 215, 215);
+    border: darkgrey 1px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-family: Verdana;
+    font-style: italic;
+    padding: 5px 5px 1px 5px;
+}
+.div.scroll {
+    overflow: visible;
+}
+div.ex1 {
+    background-color: white;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
 .divposition {
     width: 80%; 
     margin-top: 1%;
-    height: 45%;
     border: black solid 2px;
-
+    border-radius: 5px;
+    padding-top: 20px;
 }
 
-.hintstyle {
-padding:6px;  
-background-color:blanchedalmond; 
-border:solid black 2px; 
-border-radius: 3px
+.commentlog {
+    width: 80%; 
+    margin-top: 2%;
+    height: 42%;
+    border: black solid 2px;
+    border-radius: 5px;
+    padding-top: 20px;
+}
+
+.warning {
+    color: red;
+    visibility: collapse;
 }

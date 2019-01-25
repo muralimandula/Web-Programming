@@ -8,64 +8,48 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-            
+            <link rel="stylesheet" href="commentBox.css"></link>   
     </head>
-
-    <style>
-        .divposition {
-            width: 80%; 
-            margin-top: 1%;
-            height: 45%;
-            border: black solid 2px;
-
-        }
-
-    .hintstyle {
-        padding:6px;  
-        background-color:blanchedalmond; 
-        border:solid black 2px; 
-        border-radius: 3px
-    }
-    </style>
-
 
     <body>
         
         <div class="row container-fluid"> 
             <h4 style="text-align: center">Comment Box</h4>
             
-            <div class="container fluid" style="width: 80%;  margin-top: 1%; border: black solid 2px">
+            <div class="container fluid divposition">
 <!-- place for the user input -->
 
                 <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name">
+                        <label for="user">Name:</label>
+                        <textarea class="form-control" rows="1" id="username"></textarea>
                 </div>
-                <div id="namestatus"></div>
+                <div class="warning" id="namestatus"> Cannot be blank!</div>
 
                 <div class="form-group">
                         <label for="comment">Comment:</label>
-                        <textarea class="form-control" rows="5" id="commenttext"></textarea>
+                        <textarea class="form-control" rows="2" id="commenttext"></textarea>
                 </div>
-                <div id="commentstatus"></div>
+                <div class="warning" id="commentstatus"> Cannot be blank!</div>
 
                 <div class="form-group">
                         <label>Password:</label>
-                        <input type="password" id="inputpassword" name="password" class="form-control" data-toggle="password">
+                        <input type="password" id="inputpassword" name="password" class="form-control">
+                </div>
+                <div class="warning" id="passwordblank">Cannot be blank.</div>
+                <div class="warning" id="passwordstatus">Invalid Password!</div>
+
+                    <button type="button" class="btn btn-primary" onClick="validate(inputpassword.value, username.value, commenttext.value)">Post Comment</button>
+                    <div></br></div>
                 </div>
 
-                    <button type="button" class="btn btn-primary" onClick="validate(name.value,commenttext.value)">Submit</button>
-                    <div id ="status"></div>
-                    </br>
+
+            <div class="container fluid commentlog">
+                <div style="height:10%"> 
+                    <h4>Recent Comments</h4> 
+                    <hr>
                 </div>
 
-                
-
-            <div class="container fluid divposition">
-                <h4>Recent Comments</h4>
-                <div id="loadcomments" >
-                
-                </div>
+                <div class="ex1" id="loadcomments" style="height:80%"> </div>
 
             </div>
 
