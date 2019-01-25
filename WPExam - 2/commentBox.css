@@ -1,0 +1,14 @@
+.divposition {
+    width: 80%; 
+    margin-top: 1%;
+    height: 45%;
+    border: black solid 2px;
+
+}
+
+.hintstyle {
+padding:6px;  
+background-color:blanchedalmond; 
+border:solid black 2px; 
+border-radius: 3px
+}
