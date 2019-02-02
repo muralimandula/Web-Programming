@@ -1,0 +1,35 @@
+.buttonstyle {
+    border-radius: 2px;
+    margin-left: 20px;
+}
+
+.heading {
+    background-color: lightgray;
+    border-radius: 5px;
+    font-family: Verdana;
+    font-style: italic;
+    text-align: center;
+    height: 50px;
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.divposition {
+    border: darkgrey solid 2px;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.prodstyle {
+    margin: 10px;
+    /* background-color: lightgray; */
+
+}
+
+.imagesize {
+    height: 150px;
+    width: 90px;
+}
