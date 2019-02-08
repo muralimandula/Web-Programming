@@ -1,0 +1,32 @@
+<div class="col-lg-2">
+</div>
+    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    <div *ngIf = "objt!=null" >
+      <!-- <div class="container"> -->
+        <div class = "col-lg-3">
+            <img src="../assets/{{objt[ind].image}}" alt="image" style="margin-top:2%; width:fit-content; height: 600px;"> 
+        </div>
+        <div class = "col-lg-6" style="float: left; margin-top:3%">
+            <h4 class="card-title">{{objt[ind].name}}</h4>
+            <p class="card-text">{{objt[ind].description}}</p>
+            <p class="card-text">{{objt[ind].quantity}}</p> 
+            <p>Price: {{objt[ind].price}}</p>
+
+            <button color="primary" routerLink="/home">Back</button>&nbsp;
+
+            <button (click)="addToCart()"> Add to cart</button><br><br>
+
+            <div *ngIf = "added">
+                <p style="color: blue"> Product added to the cart</p>
+            </div>
+
+            <textarea name = "review" [(ngModel)]="rvw" placeholder="Review here.."></textarea>&nbsp;
+            <div class = "c">
+              <button type= "submit" (click)= "review()">Submit</button>
+            </div>
+        
+      </div> 
+      <!-- </div> -->
+    </div>
+  <!-- </div> -->
+

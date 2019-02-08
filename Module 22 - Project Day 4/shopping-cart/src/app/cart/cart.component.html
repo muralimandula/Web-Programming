@@ -1,0 +1,19 @@
+<div *ngIf = "cartObjArr.length > 0">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-7">
+                        <div *ngFor = "let x of cartIndex">
+                                        <!-- <p>{{cartObjArr[x].title}}</p> -->
+                                        <app-cart-item-details [index] = "x"></app-cart-item-details>
+                                </div>
+        </div>
+        <div class="col-lg-3">
+               <div class="bill" style="height: 400px; width: fit-content; border: solid lightgray 2px">
+                        <h4>Total Bill:</h4>
+                        <h3 class="total">{{this.data.totalBill}}</h3>
+               </div> 
+        </div>
+
+        <br>
+</div>
+<!-- <button routerLink = "/checkout"> click here to check out</button> -->
+ <!-- <button routerLink = "/check-out"> click here to check out</button> -->

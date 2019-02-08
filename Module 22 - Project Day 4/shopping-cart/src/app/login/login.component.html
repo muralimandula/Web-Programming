@@ -1,0 +1,16 @@
+
+<div class="login-page">
+    <div class="form">
+      <form id="login-form">
+        <input type="text" [(ngModel)] = "username" name = "nme" placeholder="Username"/>
+        <input type="password" [(ngModel)] = "password" name = "pw"placeholder="Password"/>
+        
+        <button (click) = "submit()">login</button>
+        <!-- </br> -->
+        <div style="color: red" *ngIf = "temp== true">Invalid Username or Password!</div>
+        <div style="color: red" *ngIf = "blank== true">Username or Password cannot be blank.</div>
+
+        <p class="message">Not registered? <a routerLink="/signup">Create an account</a></p>
+      </form>
+    </div>
+  </div> 

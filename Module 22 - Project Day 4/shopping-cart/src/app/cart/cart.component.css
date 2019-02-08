@@ -1,0 +1,10 @@
+.bill{
+    margin: 5%;
+    /* float: right; */
+    border-radius: 5px;
+}
+
+.total{
+    float: left;
+    text-align: right;
+}

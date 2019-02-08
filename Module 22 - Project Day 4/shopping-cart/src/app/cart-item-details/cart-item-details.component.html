@@ -1,0 +1,33 @@
+<div *ngIf = "quantity[index] >= 0">
+    <div class = "container">
+
+        <!-- <div class="col-lg-1">cjh</div>
+        <div class="col-lg-8"> -->
+                <div class = "row" style = "margin-top: 2%; display: flex; flex-direction: row">
+                        <div class = "col-mod-2">
+                            <img src="../assets/{{cartObjArr[index].image}}" alt="image" width = 100 height = 200>
+                        </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class = "col-mod-10" style = "height: 100%">
+                            <h4>{{cartObjArr[index].name}}</h4>
+                            <br>
+                            <h5>price: {{cartObjArr[index].price}}</h5>
+                            <br>
+                            <h5>quantity: {{quantity[index]}}</h5>
+                            <button (click) = "decrease();">-</button><button (click) = "increase();">+</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button (click) = "remove();">remove</button>
+                        </div>
+                        <hr>
+                        <hr>
+
+            
+
+                    </div>
+        <!-- </div> -->
+        <!-- <div class="col-lg-3" style="height: 400px; width: fit-content; border: solid lightgray 2px">
+            <h4>Total Bill</h4>
+        </div> -->
+        
+    </div>
+</div>

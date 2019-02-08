@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <h2 style = "text-align: center">Welcome to Shoppers Hub</h2>
+  <div class="topnav">
+      <a routerLink="/home"><span class="glyphicon glyphicon-home"></span> Home</a>
+      <a routerLink="" *ngIf ="this.data.ifloggedIN == true" style="font-style: italic">Hello! {{this.data.loggedUser}}</a>
+
+      <!-- <input  [(ngModel)]="filterName" placeholder="Search for your product.." style="width:800px; height:40px; margin-top: 7px; margin-right:100px"> -->
+      <a  routerLink="/login" style="float: right" *ngIf ="this.data.ifloggedIN != true">Login</a>
+      <a routerLink="/signup" style="float: right" *ngIf ="this.data.ifloggedIN != true">Sign Up</a>
+      <a  routerLink="/home" style="float: right" (click)="loggedOut()" *ngIf ="this.data.ifloggedIN == true">Logout <span class="glyphicon glyphicon-off"></span></a>
+      <a routerLink="/cart" style="float: right"> <span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
+
+  </div>
+  <!-- <app-home-component></app-home-component> -->
+  <!-- <div>
+      <div *ngFor = 'let name of prods | filterByName:filterName index as i' class="col-lg-2" style="margin: 2%">
+            <a routerLink = "/product-detail/{{i}}"> <img src="../assets/{{products[i].image}}" style = "margin-left:2%; width : 120px; height: 200px"></a>
+            <a class = "" routerLink = "/product-detail/{{i}}">{{name}}</a> -->
+            <!-- <hr>
+        </div>
+    
+  </div> -->
+  <router-outlet></router-outlet>
+</body>
+</html>
