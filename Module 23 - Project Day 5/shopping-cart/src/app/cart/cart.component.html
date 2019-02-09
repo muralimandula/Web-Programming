@@ -1,0 +1,67 @@
+<div *ngIf = "cartObjArr.length > 0">
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-6">
+                <!-- <p>checking</p>
+                <p>{{this.data.cartquantity}}</p> -->
+                <div *ngIf="this.data.cartquantity==0">
+                        <img src="../../assets/emptycart.png" class="center">
+                        <button type="button" routerLink ="/home" class="center btn" style="font-family: Verdana, Geneva, Tahoma, sans-serif">Shop Now</button>
+
+                </div>
+                <div *ngFor = "let x of cartIndex">
+                                        <!-- <p>{{cartObjArr[x].title}}</p> -->
+                        <app-cart-item-details [index] = "x"></app-cart-item-details>
+                </div>
+        </div>
+        <div class="col-lg-3 row">
+               <div *ngIf="this.data.cartquantity!=0" class="bill" style="height: 400px; width: fit-content; border: solid lightgray 2px">
+                        <h2 style = "text-align: left">Total Bill: {{this.data.totalBill}}/- </h2>
+                        <!-- <h3 class="total">{{this.data.totalBill}}/-</h3> <br> -->
+                        <br>
+                        <div class="col-xs-12">
+                                <label for="ex2">Name</label>
+                                <input class="form-control" [(ngModel)]="cname" id="ex2" type="text">
+                                <br>
+                                <label for="ex2">Mobile number</label>
+                                <input class="form-control" [(ngModel)]="cphone" id="ex2" type="text">
+                                <br>
+                                <label for="ex2">Address</label>
+                                <textarea class="form-control" [(ngModel)]="caddress" id="ex3"></textarea>
+                        </div>
+               </div>
+                <div class="center" style="color: red" *ngIf ="cblank== true">All fields are mandatory!</div>
+
+               <div *ngIf="this.data.cartquantity!=0" >
+                        <button type="button" class="center btn" (click) = "purchase()">Proceed</button>
+
+                <!-- <button routerLink = "/checkout" class="center btn" (click) = "purchase()">Proceed to checkout</button> -->
+                </div>
+                <br>
+                <div>
+                        <button type="button" *ngIf="cinfo == true" class="center btn"  data-toggle="modal" data-target="#myModal" (click) = "order()">Place Order Now</button>      
+                </div>
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                                  <!-- Modal content-->
+                        <div class="modal-content">
+                                <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Order placed successfully !!</h4>
+                                </div>
+                                <div class="modal-body">
+                                      <p>OrderID : 201909{{this.data.totalBill}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                      <button routerLink = "/home" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                        </div>              
+                    </div>
+                </div>
+        </div>
+
+        <br>
+</div>
+<!-- <button routerLink = "/checkout"> click here to check out</button> -->
+ <!-- <button routerLink = "/check-out"> click here to check out</button> -->

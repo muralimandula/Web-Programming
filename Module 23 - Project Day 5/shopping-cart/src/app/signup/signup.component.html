@@ -1,0 +1,19 @@
+<div class="login-page">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" [(ngModel)] = "username" name = "usrname" placeholder="Name"/>
+        <input type="password" [(ngModel)] = "password" name = "pasw" placeholder="Password"/>
+        <input type="password" [(ngModel)] = "password2" name = "pasw2" placeholder="Re-Enter Password"/>
+
+        <input type="text" [(ngModel)] = "email" name = "emailID" placeholder="Email Address"/>
+        <button (click) = "submit()">Create</button>
+        <div style="color: red" *ngIf ="blank== true">All fields are mandatory!</div>
+        <div style="color: red" *ngIf ="nomatch== true">Passwords doesn't match!</div>
+
+
+        <div *ngIf="accept == true">Account created successfully<br>Please click on Sign In</div>
+        <p class="message">Already registered? <a routerLink="/login">Sign In</a></p>
+      </form>
+    </div>
+</div>
+  

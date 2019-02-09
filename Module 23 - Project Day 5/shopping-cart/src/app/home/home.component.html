@@ -1,0 +1,22 @@
+<div class = "a" style= "padding-left: 500px;">
+        <!-- <input  [(ngModel)]="filterName" placeholder="Search for your product..">
+         -->
+         <input  [(ngModel)]="filterName" placeholder="Search for your product.." style="width:800px; height:40px; margin-top: 7px; margin-right:100px">
+        
+        </div>
+        <h2 style = "text-align: center">Grab your product</h2>
+        <div *ngIf = "filterName">
+                <div *ngFor = 'let i of prods | filterByName:filterName'>
+                        <img src="assets\img\{{products[i].image}}" style = "margin-left:2%; width : 120px; height: 200px">
+                        <a class = "b" style="color: black" routerLink = "/product-detail/{{i}}">{{products[i].name}}</a>
+                        <hr>
+                    </div>
+        </div>
+        
+        <div *ngIf = "!filterName">
+                <div *ngFor = 'let prod of products;index as i'>
+                        <img src="assets\img\{{prod.image}}" style = "margin-left:2%; width : 120px; height: 200px">
+                        <a class = "b" routerLink = "/product-detail/{{i}}">{{prod.name}}</a>
+                        <hr>
+                    </div>
+        </div>

@@ -1,0 +1,49 @@
+<div class="col-lg-2">
+</div>
+    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    <div *ngIf = "objt!=null" >
+      <!-- <div class="container"> -->
+        <div class = "col-lg-3">
+            <img src="../assets/{{objt[ind].image}}" alt="image" style="margin-top:2%; width:fit-content; height: 600px;"> 
+        </div>
+        <div class = "col-lg-6" style="float: left; margin-top:3%">
+            <h4 class="card-title">{{objt[ind].name}}</h4>
+            <p class="card-text">{{objt[ind].description}}</p>
+            <p id="quantity" class="card-text">{{objt[ind].quantity}}</p> 
+            <p id="price">{{objt[ind].price}}</p>
+
+            <button class="btn" color="primary" routerLink="/home">Back</button>&nbsp;
+
+            <button class="btn" (click)="addToCart()"> Add to cart</button><br><br>
+
+            <div *ngIf = "added" class="alert alert-success">
+                <strong>Successfull!</strong> Product added to the cart.
+              </div>
+
+            <!-- <div *ngIf = "added">
+                <p style="color: blue"> Product added to the cart</p>
+            </div> -->
+
+            <div *ngIf="this.data.ifloggedIN== true">
+                <textarea name = "review"   [(ngModel)]="rvw" placeholder="Review here.."></textarea>&nbsp;
+                <!-- <div class = "c"> -->
+                  <button type= "submit" class="btn" (click)= "review()">Submit</button>
+                <!-- </div> -->
+            </div>
+            <div *ngIf="this.data.ifloggedIN!= true">
+                 <p class="message"><i>To add a review </i> <a routerLink="/login"> Login </a>/<a routerLink="/signup"> Sign Up</a></p>
+            </div>
+            <button class="btn" (click) = "getReview()">See review</button>
+            <br>
+            <br>
+            <div *ngFor = "let x of reviewObj">
+              <div class="alert" style="border:solid lightgray 1px">
+                  <p><i><Strong>{{x.review}} </Strong></i> &nbsp; -- {{x.name}}</p>
+              </div>
+              
+            </div>
+      </div> 
+      <!-- </div> -->
+    </div>
+  <!-- </div> -->
+
